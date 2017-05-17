@@ -1,2 +1,3 @@
-# HAWC-Bootstrap
-HAWC Bootstrap
+Health & Wellness Center Membership Website
+
+Members will register, accept the waiver, and select a locker (also select Owner/Co-owner). Members will be able to email through the website to the administrator. Administrator will be able to email "All Members" or "Select Member(s)". Administrator will be able to run reports, Locker Assignment, Paid status, etc. Website will email members a reminder to pay their dues. Members may pay for multiple years. Members may be bi-annually. 
