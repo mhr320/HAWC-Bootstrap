@@ -1,1 +1,2 @@
-# this is a test cgi file
+#include <stdio.h>
+
