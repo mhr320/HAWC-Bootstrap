@@ -1,11 +1,11 @@
 $(document).ready(function() {
         // makes the button hidden until checkbox is checked, occurs on document load
-    $('.btn').addClass('hidden') 
+    $('#register').addClass('hidden') 
 });
         // once checkbox has been checked, the button appears
 $('.checkbox').change(function(){
-    $('.btn').removeClass('hidden');
-    $(".btn").click(function(){
+    $('#register').removeClass('hidden');
+    $("#register").click(function(){
         $(this).button('loading');
     });
 });
