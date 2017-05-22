@@ -2,7 +2,7 @@ $(document).ready(function() {
 	// sets focus to Full Name text field
     $( "#usr" ).focus(); 
 });
-    
+    // Need to be able to .addClass() when checkbox unchecked
 $('.checkbox').change(function(){
 	// once checkbox has been checked, the button appears
     $('#register').removeClass('hidden');
