@@ -1,33 +1,12 @@
 $(document).ready(function() {
-	$('form > input').keyup(function() {
-		var empty = false;
-			$('form > input').each(function() {
-            	if ($(this).val() == '') {
-                	empty = true;
-            	}
-        });
-
-
-/*
-$(document).ready((function() {$('form > input').keyup(
-
-	function() {var empty = false;
-
-        $('form > input').each(function() {
-            if ($(this).val() == '') {
-                empty = true;
-            }
-        });
-
-        if (empty) {
-            $('#register').addClass('hidden'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
-        } else {
-            $('#register').removeClass('hidden'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
-        }
-    });
-}) () );
-$(document).ready(function(){
+        // makes the button hidden until checkbox is checked, occurs on document load
+    $('.btn').addClass('hidden') 
+});
+        // once checkbox has been checked, the button appears
+$('.checkbox').change(function(){
+    $('.btn').removeClass('hidden');
     $(".btn").click(function(){
         $(this).button('loading');
-    });   
-});*/
+    });
+});
+       
