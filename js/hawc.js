@@ -1,12 +1,15 @@
 $(document).ready(function() {
-        // makes the button hidden until checkbox is checked, occurs on document load
-    $('#register').addClass('hidden') 
+	// sets focus to Full Name text field
+    $( "#usr" ).focus(); 
 });
-        // once checkbox has been checked, the button appears
+    
 $('.checkbox').change(function(){
+	// once checkbox has been checked, the button appears
     $('#register').removeClass('hidden');
+    // shows label
+    $('#regLabel').removeClass('hidden');
+    // once button is clicked, the button will change to "loading..."
     $("#register").click(function(){
         $(this).button('loading');
     });
 });
-       

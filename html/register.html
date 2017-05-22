@@ -75,11 +75,6 @@
             <option>Other</option>
           </select>
       </div>
-    <!-- Operating Initials Field -->
-      <div class="form-group" style="padding: 5px;">
-        <label for="oi">Operating Initials:</label>
-        <input type="text" class="form-control" id="oi">
-      </div>
     <!-- Email Field -->
       <div class="form-group" style="padding: 5px;">
         <label for="email">Email:</label>
@@ -116,11 +111,17 @@
               <input type="checkbox" value="">By checking this box, I am agreeing to the HAWC Wavier below.
             </label>
       </div>
-      <div style="padding-left: 15px;">
-      <!-- Submit Button Labeled: Register -->
-      <button id="register" type="button" class="btn btn-warning btn-lg">Register</button>
-      </div>
       
+      
+  
+      
+    </div>
+    <div class="col-md-4">
+      <div style="padding: 65px 30px 75px 100px;">
+      <!-- Submit Button Labeled: Register -->
+      <label id="regLabel" class="hidden" for="register"><h3>Click here to submit your registration</h3></label>
+      <button id="register" type="button" class="btn btn-warning btn-lg hidden">Register</button>
+      </div>
     </div>
     </div>
 </div>
