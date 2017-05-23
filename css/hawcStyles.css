@@ -12,3 +12,10 @@
 #itals {
     color: #ef0b1e;
     }
+input.invalid, textarea.invalid, option.invalid{
+    border: 2px solid red;
+}
+
+input.valid, textarea.valid, option.valid{
+    border: 2px solid green;
+}
