@@ -10,11 +10,12 @@ $('#usr').focusout('input', function() {
     else{input.removeClass("valid").addClass("invalid");}
 });
 
-// TODO: Check if area field is complete
+// TODO: Check if Area field is complete - https://stackoverflow.com/questions/12467682/jquery-validate-dropdown-list
 // TODO: Make sure passwords match and fields are complete
 // TODO: Locker Selection field validation
 
 // Checks if email field is a valid email
+// from - https://formden.com/blog/validate-contact-form-jquery
 $('#email').focusout('input', function() {
     var input=$(this);
     var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
