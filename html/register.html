@@ -2,13 +2,12 @@
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <head>
 	<title>ZOB H.A.W.C.</title>
 	<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../css/hawcStyles.css">
 </head>
-
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="../index.html">ZOB H.A.W.C.</a>
@@ -20,35 +19,29 @@
     </ul>
   </div>
 </nav>
-
-<style>
-.bg-1 { 
-    background-color: #36578c; /* Green */
-    color: #ffffff;
-    }
-#hawcwaiver {
-    text-decoration: none;
-    color: #fff;
-    }
-#hawctext {
-    color: #36578c;
-    }
-</style>
-
 <body>
-
-<div class="container-fluid bg-1">
-
+<div class="container-fluid bg-1 text-align-center" style="padding-top: 120px;">
+<div class="row">
+<div class="col-md-4">
+  <h1>HAWC Registration</h1>
+  <h4>Please fill in all of the fields below.</h4>
+</div>
+<div class="col-md-4"></div>
+</div>
+</div>
+<div class="container-fluid bg-1" style="padding-top: 20px;">
     <div class="row" style="padding-bottom: 15px;">
     <div class="col-md-4">
+    <!-- Full Name Input Field -->
       <div class="form-group" style="padding: 5px;">
         <label for="usr">Full Name:</label>
         <input type="text" class="form-control" id="usr">
       </div>
+    <!-- Area Dropdown List -->
       <div class="form-group" style="padding: 5px;">
         <label for="area">Area:</label>
-          <select class="form-control" id="area">
-            <option></option>
+          <select name="area" class="form-control" id="area">
+            <option value=''>Please Select...</option>
             <option>Area 1</option>
             <option>Area 2</option>
             <option>Area 3</option>
@@ -63,25 +56,26 @@
             <option>Other</option>
           </select>
       </div>
-      <div class="form-group" style="padding: 5px;">
-        <label for="oi">Operating Initials:</label>
-        <input type="text" class="form-control" id="oi">
-      </div>
+    <!-- Email Field -->
       <div class="form-group" style="padding: 5px;">
         <label for="email">Email:</label>
         <input type="email" class="form-control" id="email">
       </div>
     </div>
+    <!-- New Column -->
     <div class="col-md-4">
+    <!-- First Password Field -->
       <div class="form-group" style="padding: 5px;">
         <label for="pwd">Password:</label>
         <input type="password" class="form-control" id="pwd">
       </div>
-<!-- I do not know about the label and id here, may need changing -->
+    <!-- Password Verification Field -->
+    <!-- I do not know about the label and id here, may need changing -->
       <div class="form-group" style="padding: 5px;">
         <label for="verifyPwd">Verify Password:</label>
         <input type="password" class="form-control" id="verifyPwd">
       </div>
+    <!-- Locker Dropdown List, To be populated from SQL -->
       <div class="form-group" style="padding: 5px;">
         <label for="sel1">Locker:</label>
           <select class="form-control" id="sel1">
@@ -92,35 +86,57 @@
             <option>Locker 4a</option>
           </select>
       </div>
+      <!-- Checkbox for waiver, may not need if we get every Clause Initialed in next section -->
       <div class="checkbox" style="padding: 5px 0 5px 10px;">
-            <label><input type="checkbox" value="">By checking this box, I am agreeing to the HAWC Wavier below.</label>
-          </div>
-      <div style="padding-left: 15px;">
-      <button type="button" class="btn btn-warning btn-lg">Submit</button>
+            <label>
+              <input id="chbx" type="checkbox" value="">By checking this box, I am agreeing to the HAWC Wavier below.
+            </label>
+            <div id="signed" class="hidden" style="padding-left: 30px;"><p>// HAWC Waiver Digitally Signed //</p></div>
       </div>
-      
+    </div>
+    <div class="col-md-4">
+      <div style="padding: 65px 30px 75px 100px;">
+      <!-- Submit Button Labeled: Register -->
+      <!-- Need to change button format when backend finished -->
+      <!-- <label id="regLabel" class="hidden" for="register"><h3>Click here to submit your registration</h3></label>
+      <button id="register" type="button" class="btn btn-warning btn-lg hidden">
+      <a href="registerThankYou.html" style="text-decoration: none;">Register</a></button> -->
+      <label id="regLabel" class="hidden" for="register"><h3>Click here to submit your registration</h3></label>
+      <a id="register" href="registerThankYou.html" class="btn btn-warning btn-lg hidden" role="button">Submit</a>
+      </div>
+
     </div>
     </div>
 </div>
 
-<div class="container-fluid" style="padding: 25px 150px 15px 150px;">
-  <h1 style="padding-bottom: 20px;">This will be the place holder for the HAWC waiver text to be added later.</h1>
+<div class="container-fluid text-align-center" style="padding: 25px 150px 15px 150px;">
+
+  <h1 style="padding-bottom: 45px;">Cleveland Center Health &amp Wellness Center Waiver</h1>
   <p id="hawctext"><strong>
   The Cleveland Center Wellness Association is a voluntary organization whose goal is to imporove the physical and mental health and welfare of the employees of Cleveland ARTCC. The association has been granted space for a Wellness Center work-out area. Use of the equipment in the Cneter is limited to members of the Association who have signed this agreement and have paid the annual fee.</p>
   
-  <p id="hawctext">Members of teh Association agree to abide by the rules and limitations of the Association listed below.  Failure to abide by these rules swhall result in forfeiture of the rightsw to use an and all equipment in the Wellness Center.</p>
-
+  <p id="hawctext">Members of the Association agree to abide by the rules and limitations of the Association listed below.  Failure to abide by these rules swhall result in forfeiture of the rightsw to use an and all equipment in the Wellness Center.</p>
+  <br><br>
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
   <ol>
-    <li>
-    The annual fee for membership in the Weellness Association is $100.00, payable in January of each year. Use of the membership fee shall be governed by the Wellness Committee and shall be governed by the equipment, or for other wellness activites.  Members whose renewal fees are more than 30 days in arrears shall be terminated from the Association. Annual fee subject to change with advance notice to members.</li>
-    <li>
-    Use of the Wellness Center shall be limited to employees of Cleveland ARTCC only. Family members and friends are not authorized to use the Wellness Center at any time.  
-    </li>
-  </ol>
+    <li>The annual fee for membership in the Wellness Association is $100.00, payable in January of each year. Use of the membership fee shall be governed by the Wellness Committee and shall be governed by the equipment, or for other wellness activites.  Members whose renewal fees are more than 30 days in arrears shall be terminated from the Association. Annual fee subject to change with advance notice to members.</li><br>
+    <li>Use of the Wellness Center shall be limited to employees of Cleveland ARTCC only. Family members and friends are not authorized to use the Wellness Center at any time.</li><br>
+    <li>Unless specifically authorized or in the event of an emergency, employees are not allowed down the stairs intothe old control room, or any other area designated as off-limits</li><br>
+    <li>Members shall use work-out equipment for its designed purpose and shall not abuse equipment in any manner that may lead to damage of the equipment or endanger other persons or property.</li><br>
+    <li>Members shall use good judgment and courtesy in their personal hygiene either in the Wellness Center or in their working areas. Please wipe down any moisture left on the equipment after use.</li><br>
+    <li>Members shall not bring any food items into the Wellness Center. Please ensure that the beferages are handled in a manner that does not result in spillage.</li><br>
+    <li>Donations or loaning of equipment is greatly appreciated. Any equipment brought in for use in the Center shall only be done after prior approval of the Wellness Committee. Under no circumstances shall members move or relocate any equipment or otherwise alter the layout of the Wellness Center.</li><br>
+    <li>Radios or other audio equipment shall not be played at a level that prevents others from hearing the public address system.</li><br>
+    <li><i id="itals">Agreeing to the use of ZOB Wellness Center will be at your own risk.</i> Further, this agreement, <i id="itals">your</i> heirs, executors and administrators, waive and release any and all claims or damages whatsoever that <i id="itals">you</i> or <i id="itals">your</i> representative may have, or hereafter may accrue, against Cleveland Center, arising from or incident to the use of the Wellness Center.</li><br>
+    <li>The Wellness Committee strongly recommends that employees consult with their family  physician before beginning any exercise program. With my <i id="itals">signature below</i>, I attest and verify that I am physically able to take part in the Cleveland Center Wellness Center activities. I have read the entire above conditions and accept as shown by my <i id="itals">signature. </i></li><br>
+    </ol>
+    <button id="backToTop" type="button" class="btn btn-default btn-sm">Back to Top</button>
 
+  </div>
+  <div class="col-md-2"></div>
 </body>
-<script type="text/javascript" src="../bootstrap-3.3.7/js/bootstrap.js"></script>
-<script type="text/javascript" src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../bootstrap-3.3.7/js/npm.js"></script>
 <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../bootstrap-3.3.7/js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/registerHawc.js"></script>
 </html>

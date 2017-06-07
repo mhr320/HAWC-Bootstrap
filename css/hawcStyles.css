@@ -1,0 +1,21 @@
+.bg-1 { 
+    background-color: #36578c; /* Green */
+    color: #ffffff;
+    }
+#hawcwaiver {
+    text-decoration: none;
+    color: #fff;
+    }
+#hawctext {
+    color: #36578c;
+    }
+#itals {
+    color: #ef0b1e;
+    }
+input.invalid, textarea.invalid{
+    border: 5px solid red;
+}
+
+input.valid, textarea.valid{
+    border: 5px solid green;
+}
